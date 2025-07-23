@@ -1,0 +1,34 @@
+[tool.semantic_release]
+version_variables = ["setup.py:__version__"]
+commit_message = "chore: update version to {version}"
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+prerelease = false
+
+[tool.semantic_release.branches.set_up_repository]
+match = "^(?!main$).+"
+prerelease = false
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "yacs.*",
+    "setuptools.*",
+    "wfdb",
+    "sklearn.metrics",
+    "scipy.*",
+    "numpy.*",
+    "pandas.*",
+    "h5py.*",
+    "tqdm.*",
+]
+ignore_missing_imports = true
+
+[tool.isort]
+profile="black"

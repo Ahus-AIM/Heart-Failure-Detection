@@ -1,0 +1,12 @@
+__pycache__/
+venv/
+sandbox/
+test/holdout_outputs/
+test/model/
+# Ignore data files and exports
+*.hdf5
+*.zip
+*.csv
+
+
+

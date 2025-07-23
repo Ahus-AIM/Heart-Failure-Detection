@@ -1,0 +1,89 @@
+MODEL:
+  class_path: 'src.model.inception.InceptionNetworkWithDownsampling'
+  KWARGS:
+    num_out_channels: 32
+TRAIN:
+  LR_SCHEDULER:
+    class_path: 'src.utils.CosineToConstantLR'
+    KWARGS:
+      T_max: 5598
+      eta_min_divisor: 1000.0
+  CUDNN_BENCHMARK: False
+  COMPILE: False
+  STOPPER:
+    class_path: 'src.utils.EarlyStopper'
+    KWARGS:
+      metric: 'val_loss'
+      patience: 7
+      delta: 0
+  OPTIMIZER:
+    class_path: 'torch.optim.AdamW'
+    KWARGS:
+      lr: 0.0001
+      weight_decay: 0.0
+  MIXED_PRECISION_SCALER:
+    class_path: 'torch.amp.GradScaler'
+    KWARGS: {}
+  CRITERION:
+    class_path: 'torch.nn.BCEWithLogitsLoss'
+  KWARGS:
+    epochs: 9
+    device: 'cuda'
+    metrics: []
+    global_metrics:
+      - class_path: 'src.metric.metric.aucroc'
+      - class_path: 'src.metric.metric.aucprc'
+HYPERPARAMETER_SEARCH:
+  SEARCH_SPACE:
+    DATASET:
+      KWARGS:
+        val_fold:
+          SAMPLE_TYPE: 'ray.tune.choice'
+          KWARGS:
+            categories: [0, 1, 2, 3, 4]
+DATALOADER:
+  class_path: 'torch.utils.data.DataLoader'
+  KWARGS:
+    batch_size: 64
+    shuffle: True
+    num_workers: 25
+    pin_memory: True
+    drop_last: False
+    persistent_workers: True
+    prefetch_factor: 5
+DATASET:
+  class_path: 'src.dataset.dataset.ECGTrainDataset'
+  KWARGS:
+    val_fold: 0
+  TRAIN:
+    KWARGS:
+      mode: 'train'
+      csv_path: '/dataset/ecg/tabular/processed/ecgs_with_labels.csv'
+      ecg_root: '/dataset/ecg/ecg-pt/'
+    TRANSFORM:
+      class_path: 'src.transform.transform.ComposedTransform'
+      KWARGS:
+        transform_config:
+          - class_path: 'src.transform.transform.ToFloatMv'
+          - class_path: 'src.transform.transform.DropChannels'
+          - class_path: 'src.transform.transform.Resample'
+            KWARGS:
+              input_fs: 1000
+              target_fs: 500
+          - class_path: 'src.transform.transform.Normalize'
+  VAL:
+    KWARGS:
+      mode: 'val'
+      csv_path: '/dataset/ecg/tabular/processed/ecgs_with_labels.csv'
+      ecg_root: '/dataset/ecg/ecg-pt/'
+    TRANSFORM:
+      class_path: 'src.transform.transform.ComposedTransform'
+      KWARGS:
+        transform_config:
+          - class_path: 'src.transform.transform.ToFloatMv'
+          - class_path: 'src.transform.transform.DropChannels'
+          - class_path: 'src.transform.transform.Resample'
+            KWARGS:
+              input_fs: 1000
+              target_fs: 500
+          - class_path: 'src.transform.transform.Normalize'
