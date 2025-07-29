@@ -2,6 +2,19 @@
 
 ---
 
+## Installation
+
+Set up a Python 3.12 virtual environment and install dependencies:
+
+
+```bash
+python3.12 -m venv venv
+source venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+---
+
 ## ️ Project Structure
 
 Code is located under the `src/` folder with the following main components:
@@ -19,7 +32,7 @@ Code is located under the `src/` folder with the following main components:
 Activate your Python environment and run training with a specific config file:
 
 ```bash
-(venv) python src/train.py --config src/config/inception.yml
+python src/train.py --config src/config/inception.yml
 ```
 
 ---
