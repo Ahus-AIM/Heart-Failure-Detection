@@ -1,7 +1,10 @@
 import importlib
 import math
+import time
 from collections import defaultdict
+from contextlib import contextmanager
 from copy import deepcopy
+from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
@@ -11,6 +14,19 @@ from ray.tune import Stopper
 from torch import nn
 from torch.utils.data import DataLoader, Subset
 from yacs.config import CfgNode as CN
+
+
+@contextmanager
+def log_step(name: str):
+    start = time.time()
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{ts}] Starting: {name}")
+    try:
+        yield
+    finally:
+        elapsed = time.time() - start
+        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{ts}] Finished: {name} ({elapsed:.1f}s)")
 
 
 class EarlyStopper(Stopper):

@@ -1,0 +1,5 @@
+paths:
+  d_labitems: /dataset/physionet.org/files/mimiciv/3.1/hosp/d_labitems.csv
+  labevents: /dataset/physionet.org/files/mimiciv/3.1/hosp/labevents.csv
+  waveform_note_links: /dataset/physionet.org/files/mimic-iv-ecg-diagnostic/mimic-iv-ecg-diagnostic-electrocardiogram-matched-subset-1.0/waveform_note_links.csv
+  out: ./sandbox/mimic_ecg_index.csv # This is used in step 2 of inference.

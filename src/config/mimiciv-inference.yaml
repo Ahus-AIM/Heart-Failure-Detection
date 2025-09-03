@@ -1,0 +1,13 @@
+paths:
+  base_dir: /dataset/physionet.org/files/mimic-iv-ecg-diagnostic/
+  ecg_csv_path: /dataset/physionet.org/files/mimic-iv-ecg-ext-icd-labels/1.0.1/records_w_diag_icd10.csv
+  labs_csv_path: ./sandbox/mimic_ecg_index.csv # Feel free to either create the sandbox folder or modify the path
+  output_dir: ./sandbox/output
+
+model:
+  device: cuda
+  weights_dir: ./weights
+
+inference:
+  batch_size: 512
+  workers: 32
