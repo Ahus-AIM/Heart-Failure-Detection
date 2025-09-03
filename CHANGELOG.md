@@ -1,6 +1,33 @@
 # CHANGELOG
 
 
+## v0.2.0 (2025-09-03)
+
+### Continuous Integration
+
+* ci: remove irrelevant exclusions ([`20fd287`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/20fd287352647970d4e79442dd6d2474a18fa29e))
+
+### Documentation
+
+* docs: update readme with instructions for external validation on MIMIC-IV ([`a20e19c`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/a20e19c2b8446d862fb3d520af098d3c517bc781))
+
+* docs: add installation instructions ([`f26f517`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/f26f5176d42e8050a5fd76ea97f3ce72b06fbec7))
+
+### Features
+
+* feat: add support for plug and play external validation on MIMIC-IV ([`aa0f6c4`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/aa0f6c4e356a66d4bd26643eec4ef31bc5591194))
+
+### Unknown
+
+* Merge pull request #2 from Ahus-AIM/mimiciv
+
+Now, if you have access to MIMIC-IV, you can validate the model using two simple scripts. ([`86ebddd`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/86ebddd4c60722bc78195ed0f42f7b5ac8e73e45))
+
+* Merge pull request #1 from Ahus-AIM/readme
+
+docs: add installation instructions ([`99e1b64`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/99e1b6498549e70cdf9b03b36db09c82d04a5bf4))
+
+
 ## v0.1.0 (2025-07-28)
 
 ### Documentation
