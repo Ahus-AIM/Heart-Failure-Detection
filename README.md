@@ -20,7 +20,7 @@ Code is located under the `src/` folder with the following main components:
 Activate your Python environment and run training with a specific config file:
 
 ```bash
-python src/train.py --config src/config/inception.yml
+python -m src.train --config src/config/inception.yml
 ```
 
 ---
