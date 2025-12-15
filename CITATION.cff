@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+
+title: "Heart Failure Detection using Artificial Intelligence and Pragmatic Labelling"
+
+authors:
+  - family-names: Stenhede
+    given-names: Elias
+    orcid: https://orcid.org/0009-0005-2654-4553
+  - family-names: Ravn
+    given-names: Jesper
+    orcid: https://orcid.org/0009-0003-3207-6640
+  - family-names: Schirmer
+    given-names: Henrik
+    orcid: https://orcid.org/0000-0002-9348-3149
+  - family-names: Ranjbar
+    given-names: Arian
+    orcid: https://orcid.org/0000-0002-0422-2255
+
+repository-code: https://github.com/Ahus-AIM/Heart-Failure-Detection
+license: Apache-2.0
+
+preferred-citation:
+  type: article
+  title: "Heart Failure Detection using Artificial Intelligence and Pragmatic Labelling"
+  authors:
+    - family-names: Stenhede
+      given-names: Elias
+      orcid: https://orcid.org/0009-0005-2654-4553
+    - family-names: Ravn
+      given-names: Jesper
+      orcid: https://orcid.org/0009-0003-3207-6640
+    - family-names: Schirmer
+      given-names: Henrik
+      orcid: https://orcid.org/0000-0002-9348-3149
+    - family-names: Ranjbar
+      given-names: Arian
+      orcid: https://orcid.org/0000-0002-0422-2255
+  year: 2025
+
