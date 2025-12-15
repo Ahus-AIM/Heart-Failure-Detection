@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.2.2 (2025-12-15)
+
+### Bug Fixes
+
+* fix: add citation ([`24b2702`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/24b2702b61bd644611b4c459dae4ebdd7704b6e3))
+
+
 ## v0.2.1 (2025-12-15)
 
 ### Bug Fixes
