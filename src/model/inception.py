@@ -176,11 +176,6 @@ class InceptionNetworkWithDownsampling(nn.Module):
             residual=residual,
         )
 
-    def get_internal_activations(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.down_layers(x)
-        x = self.inception_network.all_but_last(x)
-        return x
-
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.down_layers(x)
         x = self.inception_network(x)
