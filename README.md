@@ -39,7 +39,8 @@ weights_dir = "weights"
 ensemble = InceptionEnsemble(weights_dir=weights_dir)
 
 # Create dummy input: (batch_size=7, channels=8, signal_length=5000) # 500 Hz times 10 sec
-x = torch.randn(7, 8, 5000)  # NOTE: model input should be z-normalized
+x = torch.randn(7, 8, 5000)  # NOTE: model input should be z-normalized per lead
+# NOTE: lead order is aVL, aVF, V1, V2, V3, V4, V5, V6
 y = ensemble(x)  # Shape: (7, 5, 1) since 5 models and 1 output class
 ```
 
