@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v0.2.1 (2025-12-15)
+
+### Bug Fixes
+
+* fix: remove unused method ([`9d2ccde`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/9d2ccdea17707d79aaedad1bb835bd52e8db7c43))
+
+### Documentation
+
+* docs: add lead order and clarify normalization ([`246b6d7`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/246b6d7b1698c2cf72189df466b4d68dcddfb9b6))
+
+* docs: run training code as module ([`521ea15`](https://github.com/Ahus-AIM/Heart-Failure-Detection/commit/521ea15f0541b9a07caa6098a46dcccaf1cc9253))
+
+
 ## v0.2.0 (2025-09-03)
 
 ### Continuous Integration
