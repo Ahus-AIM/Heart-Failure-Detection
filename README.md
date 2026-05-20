@@ -1,7 +1,8 @@
-
-# Heart Failure Detection
+# Heart failure detection in electrocardiograms using artificial intelligence and pragmatic labelling
+[![npj Digital Medicine](https://img.shields.io/badge/npj_Digital_Medicine-2026-blue)](https://www.nature.com/articles/s41746-026-02774-4)
 
 ---
+
 
 ## ️ Project Structure
 
