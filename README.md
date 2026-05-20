@@ -83,3 +83,15 @@ and individual predictions will be saved as CSV in the folder specified in the c
 
 > [!NOTE]  
 > This step can also take several minutes and is much faster using a GPU. Inference takes less than 40 seconds on a NVIDIA RTX 5090 GPU.
+
+## Citation
+
+```bibtex
+@article{stenhede2026heart,
+  title   = {Heart failure detection in electrocardiograms using Artificial Intelligence and pragmatic labelling},
+  author  = {Stenhede, Elias and Ravn, Jesper and Schirmer, Henrik and Ranjbar, Arian},
+  journal = {npj Digital Medicine},
+  year    = {2026},
+  doi     = {10.1038/s41746-026-02774-4},
+  url     = {https://www.nature.com/articles/s41746-026-02774-4}
+}
